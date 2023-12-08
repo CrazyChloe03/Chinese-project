@@ -66,35 +66,58 @@
             margin: 0;
             font-size: 14px;
         }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .tab {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <h1>语文小组 Poster</h1>
 
-    <h2>毛泽东介绍</h2>
-    <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image1.jpg" alt="Image 0">
-    <p>This is the description of the first image.</p>
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab" onclick="showContent('theme')">纪念馆主题建筑</div>
+        <div class="tab" onclick="showContent('design')">纪念馆内部设计</div>
+    </div>
 
-    <h2>Image 1 Title</h2>
-    <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image3.jpg" alt="Image 1">
-    <p>This is the description of the second image.</p>
+    <!-- Content -->
+    <div id="themeContent">
+        <h2>周恩来介绍</h2>
+        <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image1.jpg" alt="Image 0">
+        <p>This is the description of the first image.</p>
 
-    <h2>Audio</h2>
-    <audio controls>
-        <source src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/audio2.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-    </audio>
+        <h2>Image 1 Title</h2>
+        <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image3.jpg" alt="Image 1">
+        <p>This is the description of the second image.</p>
 
-    <h2>Image 2 Title</h2>
-    <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image2.jpg" alt="Image 2">
-    <p>This is the description of the third image.</p>
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/audio2.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
 
-    <h2>Audio2</h2>
-    <audio controls>
-        <source src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/audio3.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-    </audio>
+    <div id="designContent" style="display: none;">
+        <h2>Image 2 Title</h2>
+        <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image2.jpg" alt="Image 2">
+        <p>This is the description of the third image.</p>
+
+        <h2>Audio2</h2>
+        <audio controls>
+            <source src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/audio3.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
 
     <div class="collaborators">
         <div class="collaborator">
@@ -111,5 +134,14 @@
         </div>
     </div>
 
-</body>
-</html>
+    <script>
+        function showContent(tab) {
+            if (tab === 'theme') {
+                document.getElementById('themeContent').style.display = 'block';
+                document.getElementById('designContent').style.display = 'none';
+            } else if (tab === 'design') {
+                document.getElementById('themeContent').style.display = 'none';
+                document.getElementById('designContent').style.display = 'block';
+            }
+        }
+   

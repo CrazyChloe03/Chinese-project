@@ -67,6 +67,11 @@
             font-size: 14px;
         }
 
+
+        .tab-content {
+            display: none;
+        }
+
         .tabs {
             display: flex;
             justify-content: space-around;
@@ -94,12 +99,12 @@
 
     <!-- Tabs -->
     <div class="tabs">
-        <a href="#themeContent" class="tab">纪念馆主题建筑</a>
-        <a href="#designContent" class="tab">纪念馆内部设计</a>
+        <a href="#" class="tab" onclick="showContent('theme')">纪念馆主题建筑</a>
+        <a href="#" class="tab" onclick="showContent('design')">纪念馆内部设计</a>
     </div>
 
     <!-- Content -->
-    <div id="themeContent">
+    <div id="themeContent" class="tab-content">
         <h2>毛泽东介绍</h2>
         <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image1.jpg" alt="Image 0">
         <p>This is the description of the first image.</p>
@@ -115,7 +120,7 @@
         </audio>
     </div>
 
-    <div id="designContent" style="display: none;">
+    <div id="designContent" class="tab-content">
         <h2>Image 2 Title</h2>
         <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image2.jpg" alt="Image 2">
         <p>This is the description of the third image.</p>
@@ -142,4 +147,18 @@
         </div>
     </div>
 
-   
+    <script>
+        function showContent(tab) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = 'none';
+            }
+
+            // Show the selected tab content
+            document.getElementById(tab + 'Content').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

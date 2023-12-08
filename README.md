@@ -1,7 +1,7 @@
 # Chinese-project
 Chinese project by Jerry Kevin and Aaron
 
-Aaron drew the pictures, told me the inspirations
+Aaron drew the pictures, and the exit
 
 Kevin wrote the inner chamber descriptions
 

@@ -11,47 +11,99 @@
             margin: 20px;
         }
 
-        h1, h2 {
+        h1 {
             color: #333;
             text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 24px;
         }
 
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin: 10px;
+            margin: 10px 0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         p {
             color: #555;
             text-align: center;
-            margin: 20px;
+            margin: 20px 0;
         }
 
         audio {
             width: 100%;
             margin-top: 20px;
         }
+
+        .collaborators {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .collaborator {
+            text-align: center;
+        }
+
+        .collaborator img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .collaborator p {
+            margin: 0;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>语文小组Poster</h1>
+    <h1>语文小组 Poster</h1>
 
-    <h2>展览馆图片</h2>
+    <h2>Image 0 Title</h2>
+    <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/image0.jpg" alt="Image 0">
+    <p>This is the description of the first image.</p>
+
+    <h2>Image 1 Title</h2>
     <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/image1.jpg" alt="Image 1">
-    <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/image2.jpg" alt="Image 2">
-
-    <h2>Text</h2>
-    <p>This is a sample text. You can add more paragraphs or any other HTML elements here.</p>
+    <p>This is the description of the second image.</p>
 
     <h2>Audio</h2>
     <audio controls>
         <source src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/audio.m4a" type="audio/m4a">
         Your browser does not support the audio tag.
     </audio>
+
+    <h2>Image 2 Title</h2>
+    <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/image2.jpg" alt="Image 2">
+    <p>This is the description of the third image.</p>
+
+    <div class="collaborators">
+        <div class="collaborator">
+            <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/icon1.jpg" alt="Collaborator 1">
+            <p>Aaron</p>
+        </div>
+        <div class="collaborator">
+            <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/icon2.jpg" alt="Collaborator 2">
+            <p>Kevin</p>
+        </div>
+        <div class="collaborator">
+            <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/icon3.jpg" alt="Collaborator 3">
+            <p>Jerry</p>
+        </div>
+    </div>
 
 </body>
 </html>

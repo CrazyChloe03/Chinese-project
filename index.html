@@ -77,6 +77,14 @@
 
         .tab {
             cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .tab:hover {
+            background-color: #ccc;
         }
     </style>
 </head>
@@ -86,13 +94,13 @@
 
     <!-- Tabs -->
     <div class="tabs">
-        <div class="tab" onclick="showContent('theme')">纪念馆主题建筑</div>
-        <div class="tab" onclick="showContent('design')">纪念馆内部设计</div>
+        <a href="#themeContent" class="tab">纪念馆主题建筑</a>
+        <a href="#designContent" class="tab">纪念馆内部设计</a>
     </div>
 
     <!-- Content -->
     <div id="themeContent">
-        <h2>周恩来介绍</h2>
+        <h2>毛泽东介绍</h2>
         <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/image1.jpg" alt="Image 0">
         <p>This is the description of the first image.</p>
 
@@ -134,14 +142,4 @@
         </div>
     </div>
 
-    <script>
-        function showContent(tab) {
-            if (tab === 'theme') {
-                document.getElementById('themeContent').style.display = 'block';
-                document.getElementById('designContent').style.display = 'none';
-            } else if (tab === 'design') {
-                document.getElementById('themeContent').style.display = 'none';
-                document.getElementById('designContent').style.display = 'block';
-            }
-        }
    

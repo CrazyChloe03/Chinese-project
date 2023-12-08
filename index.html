@@ -144,24 +144,23 @@
             <p>Kevin<br>Stuff</p>
         </div>
         <div class="collaborator">
-            <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/icon3.jpg" alt="Collaborator 3">
-            <p>Jerry<br>Wrote the poem and recorded audio</p>
-        </div>
+           <a href="link_for_collaborator3" target="https://github.com/CrazyChloe03/Chinese-project">
+             <img src="https://raw.githubusercontent.com/CrazyChloe03/Chinese-project/main/files/icon3.jpg" alt="Collaborator 3">
+        </a>
+        <p>Jerry<br>Wrote the poem and recorded audio</p>
+</div>
     </div>
 
     <script>
         function showContent(tab) {
-            // Hide all tab contents
             var tabContents = document.getElementsByClassName('tab-content');
             for (var i = 0; i < tabContents.length; i++) {
                 tabContents[i].style.display = 'none';
             }
 
-            // Show the selected tab content
             document.getElementById(tab + 'Content').style.display = 'block';
         }
 
-        // Show the introduction content by default
         showContent('introduction');
     </script>
 
